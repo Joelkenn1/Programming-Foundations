@@ -1,0 +1,94 @@
+#header {
+    text-align: center;
+    background-color: black;
+    color: white;
+    position: relative;
+    padding: 20px;
+    margin-right: -10px;
+    margin-left: -10px;
+    top: -21px;
+}
+
+.weeks {
+    position: relative;
+    border: black solid 10px;
+    margin-left: 25px;
+    width: fit-content;
+    top: -10px;
+}
+
+.weekhead{
+    position: relative;
+    text-align: center;
+    border: black solid 5px;
+    border-radius: 10px;
+    font-size: 30px;
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 55px;
+    top: -50px;
+    padding: 10px;
+    
+}
+
+#intrest1 {
+    position: relative;
+    margin-left: 15px;
+    top: -70px;
+    float: left;
+    border: black solid 2px;
+    padding: 3px;
+}
+
+p {
+    font-size: 19px;
+    font-family: Haettenschweiler;
+}
+
+#intrest2 {
+    position: relative;
+    margin-right: 15px;
+    top: -70px;
+    float:right;
+    border: black solid 2px;
+    padding: 5px;
+    padding-right: 20px;
+}
+ #foodimg {
+     width: 280px;
+     height: 280px;
+     margin-top: 20px;
+     margin-left: 150px;
+     border: orange dotted 3px;
+ }
+
+ #artistimg {
+    width: 280px;
+    height: 280px;
+    margin-top: 20px;
+    margin-left: 150px;
+    border: lightgray solid 3px;
+ }
+ 
+ li {
+     font-size: 25px;
+     position: relative;
+     top:-10px;
+ }
+ .break {
+     border: solid 1px black;
+ }
+
+ #table {
+     text-align: center;
+ }
+
+ th{
+     font-size: 28px;
+     border: solid 1px black;
+ }
+
+ td {
+    border: solid 1px black;
+    font-size: 23px;
+ }
