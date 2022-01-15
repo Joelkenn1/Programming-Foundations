@@ -68,4 +68,37 @@
 
     </table>
 </div>
+<h1 id="myHeader">TO DO List</h1>
+
+<input id = "Addbutton" type="button" value="Add" onclick="addTask()">
+<input id = "input" type = "text" placeholder="enter task...">
+
+ <hr>
+
+<ul id="tasks">
+
+  <li id = "li1">
+
+    <input style = "margin-left:-5px" type="button" class="done" onclick="markDone(this.parentNode)" value="&#x2713;" />
+
+    <input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" />
+
+    make todo list
+
+  </li>
+
+ </ul>
+
+<hr>
+
+<div id = "divabout">
+<input type="button" value="About" onclick="doAbout()">
+<input type ="button" value = "Clear" onclick = "clearAbout()">
+</div>
+
+<canvas id = "canvas1" class="can1"></canvas>
+
+<input type = "button" class = "button1" value="LightBlue" onclick="dolightblue()">
+<input type = "button" class = "button1" value="Gray" onclick="dogray()">
+
 <script src = "PF.js"></script>
