@@ -1,19 +1,36 @@
+body {
+    background-color: mintcream;
+    width: auto;
+}
+
+.button {
+    background-color: rgba(255, 255, 255, 0.459);
+    border-radius: 10%;
+    color: black;
+    font-size: 18px;
+    padding: 7px;
+    font-family: Geneva  ;
+}
+
 #header {
     text-align: center;
     background-color: black;
     color: white;
     position: relative;
-    padding: 20px;
-    margin-right: -10px;
-    margin-left: -10px;
+    padding: 30px;
+    margin-right: -50px;
+    margin-left: -50px;
+    left:40px;
     top: -21px;
+    font-size: 30px;
 }
 
 .weeks {
     position: relative;
     border: black solid 10px;
     margin-left: 25px;
-    width: fit-content;
+    width: 12%;
+    padding: 15px;
     top: -10px;
 }
 
@@ -23,21 +40,22 @@
     border: black solid 5px;
     border-radius: 10px;
     font-size: 30px;
-    width: fit-content;
+    width: 12%;
     margin-inline: auto;
     margin-bottom: 55px;
     top: -50px;
-    padding: 10px;
+    padding: 15px;
     
 }
 
 #intrest1 {
     position: relative;
     margin-left: 15px;
+    margin-right: 30px;
     top: -70px;
     float: left;
     border: black solid 2px;
-    padding: 3px;
+    padding: 7px;
 }
 
 p {
@@ -47,9 +65,10 @@ p {
 
 #intrest2 {
     position: relative;
-    margin-right: 15px;
+    margin-right: -5px;
+    margin-left: 15px;
     top: -70px;
-    float:right;
+    float: right;
     border: black solid 2px;
     padding: 5px;
     padding-right: 20px;
@@ -92,3 +111,21 @@ p {
     border: solid 1px black;
     font-size: 23px;
  }
+ #alert {
+     right: -280px;
+     position: relative;
+
+ }
+ .orangebackground{
+     background-color: coral;
+ }
+.bluebackground{
+    background-color: lightblue;
+}
+#info1 {
+    position: relative;
+}
+#color {
+    position: relative;
+    top: -85px;
+}
