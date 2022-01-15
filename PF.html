@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" user-scalable="no", content="width=device-width">
+    <meta name="viewport" user-scalable="no", content="width=max-width">
     <title>PF</title>
     <link rel="stylesheet" href="PF.css">
 </head>
-<h1 id = "header">Programming Foundations</h1>
+<header id = "header">Programming Foundations
+<input class = button id = "alert" type="button" value="Welcome" onclick = "dochange()"></header>
 <h1 class = "weeks">Week 1</h1>
 <h1 class = "weekhead">My Intrest</h1>
-<div id = "intrest1">
+<input id = "color" class = "button" type="button" value = "changecolor" onclick="intrestcolor()">
+<section style="display: inline-block;"><div id = "intrest1">
     <h2>My Favorite Foods</h2>
     <p>My Favorite Foods are: Fried Shrimp, Chicken Tenders, and Chicken Parmesan</p>
     <img id = "foodimg" src ="https://upload.wikimedia.org/wikipedia/commons/c/c9/McD-Chicken-Selects.jpg">
@@ -19,8 +21,9 @@
     <p>My Favorite Artists are: Drake, J.Cole, Mac Miller, Future, and NBA Youngboy</p>
     <img id = "artistimg" src ="https://upload.wikimedia.org/wikipedia/en/8/8b/Future_-_Life_Is_Good.png">
 </div>
+</section>
 
-<div style=" position:relative; margin-top: 500px; top: -40px;">
+<div id = "info1" style=" position:relative;">
     <p>As you can see, I have a pretty nice taste in food. Aside from the <em>Chicken Parmesan</em>, I really like
     to eat finger food. Foods like french fries and burgers always are more easily accessible when you're 
     hungry. Yet, a good bowl of noodles or a plate of rainbow trout never hurts. You may have also been pleased
@@ -65,3 +68,4 @@
 
     </table>
 </div>
+<script src = "PF.js"></script>
