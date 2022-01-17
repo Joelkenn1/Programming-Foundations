@@ -75,3 +75,26 @@ function dolightblue(){
    ctx.fillStyle = "black";
    ctx.fillText("Foundations", 87, 80);
  }
+function docolor(){
+     c1 = document.getElementById("canvas1");
+     colorinput = document.getElementById("clr");
+     var color = colorinput.value;
+     c1.style.backgroundColor = color;
+ }
+
+ function dosquare() {
+     c2 = document.getElementById("canvas2");
+     c2.style.backgroundColor = "white";
+     sldrinput = document.getElementById("sldr");
+     size = sldrinput.value;
+     var ctx = c2.getContext("2d");
+     ctx.clearRect(0,0, c2.width, c2.height);
+     ctx.fillRect(0,0,size,size/2);
+     ctx.fillStyle = "lightgreen";
+ }
+ function onUpload() {
+     c3 = document.getElementById("canvas3");
+     fileinput = document.getElementById("finput");
+     var image = new SimpleImage(fileinput);
+     image.drawTo(c3);
+ }
