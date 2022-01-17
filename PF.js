@@ -10,6 +10,7 @@ function intrestcolor() {
     d2.className = "bluebackground";
 
 }
+
 function addTask () {
     var input = document.getElementById("input");
     // get current text from input field
@@ -75,7 +76,8 @@ function dolightblue(){
    ctx.fillStyle = "black";
    ctx.fillText("Foundations", 87, 80);
  }
-function docolor(){
+
+ function docolor(){
      c1 = document.getElementById("canvas1");
      colorinput = document.getElementById("clr");
      var color = colorinput.value;
@@ -92,9 +94,69 @@ function docolor(){
      ctx.fillRect(0,0,size,size/2);
      ctx.fillStyle = "lightgreen";
  }
+
+ var image;
  function onUpload() {
      c3 = document.getElementById("canvas3");
      fileinput = document.getElementById("finput");
-     var image = new SimpleImage(fileinput);
+     image = new SimpleImage(fileinput);
      image.drawTo(c3);
  }
+
+ function doGray(){
+     for(var i of image.values()){
+         var avg = (i.getRed()/3 + i.getBlue()/3 + i.getGreen()/3);
+         i.setRed(avg);
+         i.setBlue(avg);
+         i.setGreen(avg);
+     }
+     var canvas = document.getElementById("canvas3");
+     image.drawTo(canvas);
+ }
+
+ var fgimg = null;
+ var bgimg = null;
+ var c4;
+ var c5;
+
+ function loadfgimg() {
+     var imgfile = document.getElementById("fgfile");
+     fgimg = new SimpleImage(imgfile);
+     c4 = document.getElementById("canvas4");
+     fgimg.drawTo(c4);
+ }
+ function loadbgimg() {
+    var imgfile = document.getElementById("bgfile");
+    bgimg = new SimpleImage(imgfile);
+    c5 = document.getElementById("canvas5");
+    bgimg.drawTo(c5);
+}
+
+ function ClearCanvas() {
+     c4 = document.getElementById("canvas4");
+     c5 = document.getElementById("canvas5");
+     var ctx4 = c4.getContext("2d");
+     var ctx5 = c5.getContext("2d");
+     ctx4.clearRect(0,0,c4.width,c4.height);
+     ctx5.clearRect(0,0,c5.width,c5.height);
+ }
+ function CreateComposite() {
+     var finalimg = new SimpleImage(fgimg.getWidth(), fgimg.getHeight());
+     for(var i of fgimg.values()){
+        if(i.getGreen() > i.getRed() + i.getBlue()){
+            var x = i.getX();
+            var y = i.getY();
+             var bgpixel = bgimg.getPixel(x, y);
+             finalimg.setPixel(x, y,bgpixel);
+         }
+         else{
+             finalimg.setPixel(i.getX(), i.getY(), i);
+         }
+         ClearCanvas(c5);
+    }
+        return finalimg;
+}   
+function greenscreen() { 
+var pic = CreateComposite();
+pic.drawTo(c4);
+}
