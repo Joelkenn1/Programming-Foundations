@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" user-scalable="no", content="width=max-width">
+    <meta name="viewport" user-scalable="no" content="width=max-width">
     <title>PF</title>
     <link rel="stylesheet" href="PF.css">
 </head>
 <header id = "header">Programming Foundations
-<input class = button id = "alert" type="button" value="Welcome" onclick = "dochange()"></header>
+<input style = "font-size:medium; position:relative;"  type = "button" id = "alert" type="button" value="Welcome" onclick = "dochange()"></header>
 <h1 class = "weeks">Week 1</h1>
 <h1 class = "weekhead">My Intrest</h1>
-<input id = "color" class = "button" type="button" value = "changecolor" onclick="intrestcolor()">
+<input id = "color" class = "button1" type="button" value = "changecolor" onclick="intrestcolor()">
 <section style="display: inline-block;"><div id = "intrest1">
     <h2>My Favorite Foods</h2>
     <p>My Favorite Foods are: Fried Shrimp, Chicken Tenders, and Chicken Parmesan</p>
@@ -24,7 +24,7 @@
 </section>
 
 <div id = "info1" style=" position:relative;">
-    <p>As you can see, I have a pretty nice taste in food. Aside from the <em>Chicken Parmesan</em>, I really like
+    <p  style="font-size: 20px;">As you can see, I have a pretty nice taste in food. Aside from the <em>Chicken Parmesan</em>, I really like
     to eat finger food. Foods like french fries and burgers always are more easily accessible when you're 
     hungry. Yet, a good bowl of noodles or a plate of rainbow trout never hurts. You may have also been pleased
     by my selection of artists. Out of the ones listed my favorite is <a href="https://en.wikipedia.org/wiki/Drake_(musician)">Drake.</a>
@@ -33,7 +33,7 @@
 </div>
 <div><h2>My Favorite Artist Ranked</h2>
     <p class = "break"> </p>
-    <ol>
+    <ol >
     <li>Drake</li>
 
     <li>J. Cole</li>
@@ -95,19 +95,44 @@
 <input type="button" value="About" onclick="doAbout()">
 <input type ="button" value = "Clear" onclick = "clearAbout()">
 </div>
+<p class = "break"> </p>
+<div>
+<h2 id = "canhead">Canvas's!</h2>
 
-div style="margin-left: 15px;"><canvas id = "canvas1" class="can1"></canvas>
+<div style="position: relative; right: -240px">
+<canvas style = "left:150px"id = "canvas1" class="can1"></canvas>
 
 <input type = "button" class = "button1" value="LightBlue" onclick="dolightblue()">
 <input type = "button" class = "button1" value="Gray" onclick="dogray()">
-<input id = "clr" type = "color" class = "button1" value = "0000FF" onchange="docolor()">
+<input style = "right:100px" id  = "clr" type = "color" class = "button1" value = "0000FF" onchange="docolor()">
 
 <canvas id = "canvas2" class = "can1"></canvas>
-<input id = "sldr" type = "range" min="0"  max = "300" oninput="dosquare()">
+<span><input id = "sldr" type = "range" min="0"  max = "300" oninput="dosquare()"></span>
 
-<canvas id = "canvas3" class = "can1"></canvas>
+<canvas style = "margin-left: 250px"id = "canvas3" class = "can1"></canvas>
 <span><input type = "file" multiple = "false" accept="image/*" id = "finput" onchange="onUpload()"></span>
 <span id = "spanhead">Images</span>
+<span><input type = "button" class = "button1" value = "MakeGray" id ="gray" onclick = "doGray()"></span></div>
+
+<p class = "break"> </p>
+<h2 id = "canhead">Green Screen!</h2>
+<p style = "font-size: 17px; background-color: red; width:fit-content">Note: Foreground images must have a green background("like a green screen"). Choose a background
+in the canvas next to foreground.
+</p>
+
+<div>
+<div style="position: relative; right: -270px"><canvas style = "position:relative; margin-left: 139px; left: -135px;" class = "gscan" id = "canvas4"></canvas>
+<span  id = "fgimgspan">Foreground Image</span>
+<canvas style = "position:relative; left: 5px"class = "gscan" id = "canvas5"></canvas>
+
+<div style="display: block"><span><input class = "finp" id = "fgfile"  type = "file" value = "foregroundimage" onchange="loadfgimg()"></span>
+<span><input class = "binp" id = "bgfile" type = "file" value = "backgroundimage" onchange="loadbgimg()"></span></div>
+
+
+
+<div style="display: block; position: relative; left: 300px;"><input type = "button" class = "button1" value = "CreateImage" onclick="greenscreen()">
+<input type = "button" class = "button1" value = "ClearImages" onclick="ClearCanvas()"></div>
+
 </div>
 
 <script src = "https://www.dukelearntoprogram.com//course1/common/js/image/SimpleImage.js"></script>
